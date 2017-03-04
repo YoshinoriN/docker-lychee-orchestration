@@ -59,6 +59,7 @@ services:
     expose:
       - "80"
       - "443"
+    command: ["/usr/local/sbin/php-fpm"]
 networks:
   app_net:
     driver: bridge
