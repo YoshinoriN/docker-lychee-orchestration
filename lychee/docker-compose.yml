@@ -52,6 +52,7 @@ services:
       MYSQL_PASSWORD: lychee
     volumes:
       - ./lychee/php-fpm:/var/run/php-fpm
+      - ./lychee/src:/var/www/html
     networks:
       - app_net
     hostname: lychee
