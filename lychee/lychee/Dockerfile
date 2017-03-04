@@ -2,7 +2,7 @@ FROM php:7.1.2-fpm
 
 MAINTAINER YoshinoriN
 
-COPY ./php-fpm.d/www.conf /usr/local/etc/php-fpm.d/zzz-www.conf
+COPY ./conf/www.conf /usr/local/etc/php-fpm.d/zzz-www.conf
 
 WORKDIR /var/www
 RUN apt-get update \
