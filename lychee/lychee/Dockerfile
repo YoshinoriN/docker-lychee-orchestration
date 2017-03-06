@@ -12,5 +12,3 @@ RUN mkdir /var/www/html/uploads /var/www/html/data \
  && apt-get update \
  && docker-php-ext-install session exif mbstring mysqli json \
  && mkdir /var/run/php-fpm
-
-EXPOSE 80
