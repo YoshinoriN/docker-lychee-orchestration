@@ -7,8 +7,9 @@ COPY ./conf/php.ini /usr/local/etc/php
 
 WORKDIR /var/www/lychee
 RUN mkdir /var/www/lychee/uploads /var/www/lychee/data \
- && chmod -R 770 /var/www/lychee \
+ && chmod -R 700 /var/www/lychee \
  && chmod -R 777 /var/www/lychee/uploads /var/www/lychee/data \
+ && chown www-data:www-data /var/www/lychee /var/www/lychee/uploads /var/www/lychee/data \ 
  && apt-get update -y \
  && apt-get install -y libjpeg-dev libpng-dev \
  && docker-php-ext-configure gd --with-jpeg-dir=/usr/local/include/php/ext \
