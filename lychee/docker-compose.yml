@@ -7,7 +7,7 @@ services:
       - ./logs/nginx/:/var/log/nginx/
       - ./nginx/config/nginx.conf:/etc/nginx/nginx.conf
       - ./lychee/php-fpm:/var/run/php-fpm
-      - ./lychee/src:/var/www/html 
+      - ./lychee/src:/var/www/lychee
     #NOTE : TLS key's path for HTTPS
     # - <host ssl_certificate key's path> : <nginx.conf ssl_certificate key's path>
     # - <host ssl_certificate_key key's path> : <nginx.conf  ssl_certificate_key key's path>
@@ -52,7 +52,7 @@ services:
       MYSQL_PASSWORD: lychee
     volumes:
       - ./lychee/php-fpm:/var/run/php-fpm
-      - ./lychee/src:/var/www/html
+      - ./lychee/src:/var/www/lychee
     networks:
       - app_net
     hostname: lychee
